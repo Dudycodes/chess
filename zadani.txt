@@ -1,0 +1,7 @@
+Napište grafický program, který nasimuluje hru Dáma podle tahů v souboru. 
+Vzhled souboru např.:
+a1 -> b2
+g8 -> h7
+b2 -> d4 -> f6 
+h2 -> g1
+Kontrolujte, zda jsou tahy korektní (ne v rámci hry, ale zda např. nepřesouváte na políčko, kde už něco je), delší posloupnosti jsou skoky a je nutné likvidovat figurky, které jsou přeskočené. 
