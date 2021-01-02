@@ -1,0 +1,23 @@
+Dáma
+- respektuje některá pravidla reálné hry:
+    - kameny se posouvají pouze vpřed a pouze o vzdálenost 1 ve směru obou os x, y
+        - jediná výjimka je přeskok, ten je o vzdálenost 2 ve směru obou os x, y
+        - všechny pohyby tedy musí být prováděny diagonálně pouze po černých polích
+        - po každém pohybu je entita povinna zastavit na některém z polí, v případě vícenásobného pohybu v rámci jednoho tahu je pak možná změna diagonálního směru pohybu vpřed
+        -  dáma nemůže přeskočit jeden kámen dvakrát 
+            - oproti reálným pravidlům je zde však výjimka - nemůže být přeskočen dvakrát, protože kameny jsou odstraňovány v průběhu sekvence, nikoliv až nakonec. Tedy - pokud jde o pohyb dámou, tam může být kámen přeskočen, a v druhém hohybu tahu se může vrátit na místo původní, či na libovolné diagonálně položené pole. (nebylo by složité podmínku dopsat, ale bohužel, už takto jsem na tom strávil až moc času...)
+    - entita nemůže udělat pohyb na již obsazené pole
+    - dáma se smí pohybovat i zpět, při svém jednom pohybu přeskakuje nejvýše jednu entitu opačné barvy
+    - dáma má červené lemování, kámen má bílé
+        - dámou se kámen stává, dostane li se na druhý okraj (podle osy y) hracího pole, než byl jeho iniciální bod vzniku
+    - je možné udělat vícero pohybů v jednom tahu, tyto pohyby však pak musí být přeskoky
+        -(pokud to ostatní pravidla dovolují, je možné udělat v jednom tahu i nekonečno pohybů - to je však kombinatoricky nemožné na základě konečného počtu soupeřových entit a jejich rozestavění...)
+    - program sleduje správnost posloupnosti zadaných kroků dle pravidel - musí se střídat pohyb bílé a černé
+    - program nesleduje pravidlo povinnosti skoku!
+        - pokud je některá z entit v pozici, kdy může přeskočit soupeřovu entitu, dle pravidel tak učinit musí - zde není kontrolováno
+    - první tah vede dle pravidel bílá figurka
+
+
+pozn.
+pro jednou celé napsáno... nic nekopírováno z netu... překvapivě
+přikládám i vzor souboru pohybů - (31. tah se už schválně nemá provést)
